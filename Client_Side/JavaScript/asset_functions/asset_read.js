@@ -58,7 +58,7 @@ function loadAssets()
 					if(obj.hasOwnProperty("error"))
 					{
 						error = true
-						$("#assetsTbl").append("Unable to load assets.");
+						$("#vhclsTbl").append("Unable to load assets.");
 					}
 				}
 			}
@@ -79,7 +79,7 @@ function loadAssets()
 				for(var i = 0; i < objects.length; i++)
 				{
 					var data = objects[i];
-					$("#assetsTbl").append("<tr class='assetRw'><td class='clarity'>"+data.clarity+"</td><td class='assetDets' ><span class='diamondInfo'>" + data.diamondat + "</span><span class='diamondInfo'>" + data.cut + ", </span><span class='diamondInfo'>" + data.colour + ", </span><span class='diamondInfo'>" + data.date + "</span></td><td class='chkHldr'><span class='chkSpc' ></span><span class='chkBx' ></span><input class='isChk' type='hidden' value='false' /><input class='assetID' type='hidden' value='"+data.assetID+"' /></td></tr>");
+					$("#vhclsTbl").append("<tr class='assetRw'><td class='clarity'>"+data.clarity+"</td><td class='assetDets' ><span class='diamondInfo'>" + data.diamondat + "</span><span class='diamondInfo'>" + data.cut + ", </span><span class='diamondInfo'>" + data.colour + ", </span><span class='diamondInfo'>" + data.date + "</span></td><td class='chkHldr'><span class='chkSpc' ></span><span class='chkBx' ></span><input class='isChk' type='hidden' value='false' /><input class='assetID' type='hidden' value='"+data.assetID+"' /></td></tr>");
 				}
 				changeBarSize();
 			}
