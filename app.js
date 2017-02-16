@@ -291,10 +291,10 @@ app.get('/blockchain/participants/cutters', function(req, res,next){
     participants.cutters.read(req,res,next,usersToSecurityContext);
 });
 app.get('/blockchain/participants/jewellery_makers', function(req, res,next){
-    participants.cutters.read(req,res,next,usersToSecurityContext);
+    participants.jewellery_makers.read(req,res,next,usersToSecurityContext);
 });
 app.get('/blockchain/participants/customers', function(req, res,next){
-    participants.cutters.read(req,res,next,usersToSecurityContext);
+    participants.customers.read(req,res,next,usersToSecurityContext);
 });
 
 
