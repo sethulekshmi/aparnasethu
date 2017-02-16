@@ -45,11 +45,11 @@ $(document).ready(function(){
 		
 		$('#fade').show();
 		
-		if($('#selAssetsTbl tr').length >= 1 && $("#recipientInfo").html() != "")
+		if($('#selVhclsTbl tr').length >= 1 && $("#recipientInfo").html() != "")
 		{
 			
 			var spans = '';
-			for(var i = 0; i < $('#selAssetsTbl tr').length; i++)
+			for(var i = 0; i < $('#selVhclsTbl tr').length; i++)
 			{
 				spans += '<div class="loaderSpan" id="span'+(i+1)+'"><u>Asset '+(i+1)+'</u><br /><br /><span id="msg'+(i+1)+'Part1"></i>waiting...</i></span><br /><span id="msg'+(i+1)+'Part2"></span><br /><span id="msg'+(i+1)+'Part3"></span><br /><span id="msg'+(i+1)+'Part4"></span><br /></div>&nbsp;';
 			}
@@ -60,13 +60,13 @@ $(document).ready(function(){
 
 			var diamondDets = [];
 		
-			$("#selAssetsTbl tr").each(function() 
+			$("#selVhclsTbl tr").each(function() 
 			{
 				
 				var assetID = $(this).find('.assetID').val();
 								
 				$('#chooseConfHd').html('<span>Transaction Complete</span>');
-				$('#confTxt').html('Transaction committed to the blockchain. <br /><br />'+sendDets+'<br /><br />'+recDets+': '+$('.delName').html()+' (Account '+$('.accAddr').html()+')<br /><br />Assets: '+$('#selAssetsTbl tr').length)
+				$('#confTxt').html('Transaction committed to the blockchain. <br /><br />'+sendDets+'<br /><br />'+recDets+': '+$('.delName').html()+' (Account '+$('.accAddr').html()+')<br /><br />Assets: '+$('#selVhclsTbl tr').length)
 				
 				var data = {}; //Data to be sent
 				data.function_name= transferName; //E.g. manufacturer_to_private
@@ -80,7 +80,7 @@ $(document).ready(function(){
 			transferAssets(diamondDets);
 				
 		}
-		else if(!($('#selAssetsTbl tr').length <= 1))
+		else if(!($('#selVhclsTbl tr').length <= 1))
 		{
 			$('#failTransfer').show();
 			$('#failTxt').html('You have not selected any assets to transfer.');
@@ -108,11 +108,11 @@ $(document).ready(function(){
 		
 		$('#fade').show();
 		
-		if($('#selAssetsTbl tr').length >= 1)
+		if($('#selVhclsTbl tr').length >= 1)
 		{
 			var spans = '';
-			for(var i = 0; i < $('#selAssetsTbl tr').length; i++)
-			{
+			for(var i = 0; i < $('#selVhclsTbl tr').length; i++)
+	
 				spans += '<div class="loaderSpan" id="span'+(i+1)+'"><u>Asset '+(i+1)+'</u><br /><br /><span id="msg'+(i+1)+'Part1"></i>waiting...</i></span><br /><span id="msg'+(i+1)+'Part2"></span><br /><span id="msg'+(i+1)+'Part3"></span><br /><span id="msg'+(i+1)+'Part4"></span><br /></div>&nbsp;';
 			}
 
@@ -122,15 +122,15 @@ $(document).ready(function(){
 		
 			var diamondDets = [];
 		
-			$("#selAssetsTbl tr").each(function()
+			$("#selVhclsTbl tr").each(function()
 			{
 				
 				var assetIDAddr = $(this).find('.assetID').val();
-				if(index == $('#selAssetsTbl tr').length)
+				if(index == $('#selVhclsTbl tr').length)
 				{
 					last = true;
 				}
-				$('#confTxt').html('Transaction committed to the blockchain. <br /><br />'+sendDets+'<br /><br />Assets: '+$('#selAssetsTbl tr').length)
+				$('#confTxt').html('Transaction committed to the blockchain. <br /><br />'+sendDets+'<br /><br />Assets: '+$('#selVhclsTbl tr').length)
 				
 				var data = {}
 				data.assetID = assetIDAddr;
