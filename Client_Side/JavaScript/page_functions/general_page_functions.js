@@ -81,7 +81,7 @@ function changeUser(company, parent, pos)
         crossDomain:true,
         url: '/admin/identity',
         success: function(d) {
-            $('#selAssetsTbl').empty();
+            $('#selVhclsTbl').empty();
             console.log(getCookie('user'));
         },
         error: function(e){
@@ -137,7 +137,7 @@ function errCreate(assetID)
 {
     $('#failHd span').html('Creation Failed');
     $('#failTransfer').show();
-    $('#failTxt').html('Failed to create car with assetID: '+assetID);
+    $('#failTxt').html('Failed to create asset with assetID: '+assetID);
     $('#loader').hide();
     $('#loaderMessages').html('');
 }
