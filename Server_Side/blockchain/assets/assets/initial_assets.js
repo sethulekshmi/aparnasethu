@@ -167,6 +167,6 @@ var full = {
 };
 
 
-exports.simple = simple;
-exports.full = full;
+exports.simple = simple_scenario;
+exports.full = full_scenario;
 
