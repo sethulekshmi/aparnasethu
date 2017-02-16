@@ -271,8 +271,8 @@ app.get('/blockchain/participants/miners', function(req, res,next){
     participants.miners.read(req,res,next,usersToSecurityContext);
 });
 
-app.get('/blockchain/participants/Distributors', function(req, res,next){
-    participants.Distributors.read(req,res,next,usersToSecurityContext);
+app.get('/blockchain/participants/distributors', function(req, res,next){
+    participants.distributors.read(req,res,next,usersToSecurityContext);
 });
 
 app.get('/blockchain/participants/dealerships', function(req, res,next){
